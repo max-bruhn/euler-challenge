@@ -1,6 +1,6 @@
-*
+
 
 !.gitignore
-!.index.html
-!.euler-solutions.js
-!.README.md
+!index.html
+!euler-solutions.js
+!README.md
