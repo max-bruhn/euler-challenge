@@ -332,6 +332,42 @@ which can be used to calculate the greatest common divisor, from which we can ge
 	
 }
 
+/* ----------- Problem 6 ----------- */
+
+/* This one was rather easy. Brute forcing has no speed issues, even if we input ver large numbers as maxRange */
+
+{
+
+	let maxRange = 100;
+
+	function sumSq(range) {
+		let counter = 1;
+		let sum = 0;
+
+		while (counter <= range) {
+			let sqr = Math.pow(counter, 2);
+			counter ++;
+			sum += sqr;
+		}
+
+		return sum;
+	}
+
+	function sqSum(range) {
+		let counter = 1;
+		let sum = 0;
+
+		while (counter <= range) {
+			sum = sum + counter;
+			counter++;
+		}
+
+		return Math.pow(sum, 2);
+	}
+
+	console.log(`Problem 6: ${sqSum(maxRange) - sumSq(maxRange)}`);
+
+}
 	
 
 
