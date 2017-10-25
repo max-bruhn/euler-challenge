@@ -300,25 +300,30 @@ which can be used to calculate the greatest common divisor, from which we can ge
 	let range = [];
 
 	for (let i=1;i<=20;i++) {
+
 		range.push(i);
+		
 	}
 
 	// then we calculate the greatest common divisor
 
 	function calcGCD(a,b) { 
-		 if (b == 0)
-		   {return a}
-		 else
-		   {return calcGCD(b, a % b)}
+
+		 if (b == 0) {
+		 	return a;
+		 }
+		 else {
+		 	return calcGCD(b, a % b);
+		 }
+
 	 }
 
 	 // from the greatest common divisor we can calculate the largest common multiplier
 
 	function calcLCM(a, b) {
-		let lcm;
-		lcm = (a*b)/calcGCD(a,b);
 
-		return lcm;
+		return (a*b)/calcGCD(a,b);
+
 	}
 
 	// the reduce method comes in handy here
