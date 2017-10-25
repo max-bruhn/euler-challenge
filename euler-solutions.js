@@ -173,7 +173,7 @@ I built it so that the number of digits can easily be modified.
 	highest = 0;
 	let digits = 3;
 
-	// this is an extra step i built in to make it easiert to try with different amounts of digits
+	// this is an extra step I built in to make it easiert to try with different amounts of digits
 	function createMax(digits) {
 		let string, nine;
 
@@ -334,7 +334,18 @@ which can be used to calculate the greatest common divisor, from which we can ge
 
 /* ----------- Problem 6 ----------- */
 
-/* This one was rather easy. Brute forcing has no speed issues, even if we input ver large numbers as maxRange */
+/* 
+The sum of the squares of the first ten natural numbers is,
+
+12 + 22 + ... + 102 = 385
+The square of the sum of the first ten natural numbers is,
+
+(1 + 2 + ... + 10)2 = 552 = 3025
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+This one was rather easy. Brute forcing has no speed issues, even if we input very large numbers as maxRange */
 
 {
 
