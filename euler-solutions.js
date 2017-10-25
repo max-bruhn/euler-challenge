@@ -293,35 +293,41 @@ count();
 /* After digging further into the problem I've discovered the euclidean algorithm, 
 which can be used to calculate the greatest common divisor, from which we can get the result. */
 
-// first we create an array with the relevant range
+{
 
-let range = [];
+	// first we create an array with the relevant range
 
-for (let i=1;i<=20;i++) {
-	range.push(i);
+	let range = [];
+
+	for (let i=1;i<=20;i++) {
+		range.push(i);
+	}
+
+	// then we calculate the greatest common divisor
+
+	function calcGCD(a,b) { 
+		 if (b == 0)
+		   {return a}
+		 else
+		   {return calcGCD(b, a % b)}
+	 }
+
+	 // from the greatest common divisor we can calculate the largest common multiplier
+
+	function calcLCM(a, b) {
+		let lcm;
+		lcm = (a*b)/calcGCD(a,b);
+
+		return lcm;
+	}
+
+	// the reduce method comes in handy here
+
+	console.log('Problem 5: ' + range.reduce(calcLCM));
+	
 }
 
-// then we calculate the greatest common divisor
-
-function calcGCD(a,b) { 
-	 if (b == 0)
-	   {return a}
-	 else
-	   {return calcGCD(b, a % b)}
- }
-
- // from the greatest common divisor we can calculate the largest common multiplier
-
-function calcLCM(a, b) {
-	let lcm;
-	lcm = (a*b)/calcGCD(a,b);
-
-	return lcm;
-}
-
-// the reduce method comes in handy here
-
-console.log('Problem 5: ' + range.reduce(calcLCM));
+	
 
 
 
