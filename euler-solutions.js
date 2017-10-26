@@ -382,7 +382,13 @@ This one was rather easy. Brute forcing has no speed issues, even if we input ve
 
 /* ----------- Problem 7 ----------- */
 	
-/* That was a tough one. The idea is to create an array with primes,
+/* 
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?
+
+That was a tough one. The idea is to create an array with primes,
 until the index of 10000 is defined.
 To make such a high prime number generation possible we make use of 
 the Sieve of Eratosthenee.
@@ -416,7 +422,7 @@ for more infos */
 	}
 
 	while(primeArray[10000] === undefined) {
-		// add 2000 integers as long as 10000 prime is undefined
+		// add 20000 integers as long as 10000th prime is undefined
 		range += 20000;
 
 		// reset previous cycle
