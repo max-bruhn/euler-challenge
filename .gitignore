@@ -4,4 +4,7 @@
 !euler-solutions.js
 !README.md
 
-!solutions/*.js
+
+!/solutions
+/soltutions/*
+!/solutions/*.js
