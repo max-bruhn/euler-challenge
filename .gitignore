@@ -3,7 +3,8 @@
 !.gitignore
 !README.md
 
-
 !/solutions
 /soltutions/*
 !/solutions/*.js
+
+.DS_Store
