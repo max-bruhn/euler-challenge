@@ -18,17 +18,16 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 
 {
     
-    let daysPerMonth, totalDayCounter, resultCounter, weekDayCounter, years;
+    let resultCounter, weekDayCounter;
     
     resultCounter = 0;
-    totalDayCounter = 0;
     weekDayCounter = 0;
     
-    for (years = 1900; years <= 2000; years++) {	
-        let monthCounter;
+    for (let years = 1900; years <= 2000; years++) {	
     
-        for (monthCounter = 0; monthCounter <= 11; monthCounter++) {
-    
+        for (let monthCounter = 0; monthCounter <= 11; monthCounter++) {
+            let daysPerMonth;
+            
             // monthCounter: 3 = april, 5 = june etc.
             if(monthCounter === (3 || 5 || 8 || 10)) {
     
@@ -51,7 +50,6 @@ How many Sundays fell on the first of the month during the twentieth century (1 
             for (let i=1; i <= daysPerMonth; i++) {
                 
                 day = i;
-                totalDayCounter++;
                 
                 // counting starts at monday: weekDayCounter = 0, so day 6 = sunday
                 if (weekDayCounter === 6) {
