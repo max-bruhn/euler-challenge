@@ -50,7 +50,7 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 	}
 
 	// 2. create array with relevant number range
-	function range() {
+	let range = () => {
 
 		for(let i = 1; i < 28123; i++) {
 
