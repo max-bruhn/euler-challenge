@@ -84,7 +84,8 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 		if(currentFib.length === digits) {
 
 			console.log('Problem 25: ' + index);
-			return index;
+            return index;
+            
 		} 
 
 	}
