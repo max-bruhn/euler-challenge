@@ -5,6 +5,7 @@
 // How many circular primes are there below one million?
 
 {
+
 	let counter = 0;
     let range = 0;
     let sieve =[];
@@ -12,11 +13,13 @@
 	let indexOfMaxPrime;
 
     function sieveOfEratosthenes(n) {
-    
 		let sqrtn = Math.sqrt(n);
-		let previousPrime;
+        let previousPrime;
+        
         for(let i = 3; i <= sqrtn; i += 2) {
+
             if(sieve[i]) {
+
                 for(j = i*i; j < n; j += i*2) {
                     sieve[j] = 0;
                 }
@@ -26,23 +29,29 @@
         for(let i = 3; i < n; i += 2) {
 
             if(sieve[i]) {
+                let valid;
+                let num;
+                let invalidNumbers;
+                let array;
 
 				if(previousPrime < 1000000 && i > 1000000) {
 					indexOfMaxPrime = primeArray.indexOf(previousPrime);
 				}
 
-				let num = i;
-				let valid = true;
-				let invalidNumbers = [0, 2, 4, 5, 6, 8];				
-				let array = num.toString().split('').map(Number);
+				num = i;
+				valid = true;
+				invalidNumbers = [0, 2, 4, 5, 6, 8];				
+				array = num.toString().split('').map(Number);
 				
 				array.forEach((el) => {
+
 					if(invalidNumbers.indexOf(el) !== -1 && array.length > 1) {
 						valid = false;
 					}
 				});
 
 				if(valid === true) {
+
 					primeArray.push(i);
 					previousPrime = i;
 				}
