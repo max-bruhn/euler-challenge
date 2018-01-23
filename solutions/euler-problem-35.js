@@ -6,7 +6,7 @@
 
 {
 
-	let counter = 0;
+    let counter = 0;
     let range = 0;
     let sieve =[];
 	let primeArray = [2];
